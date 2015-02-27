@@ -6,12 +6,16 @@
 </head>
 <body>
 
+<script src="keyboard.js"></script>
 <script src="konami.manager.js"></script>
 
 <script type="text/javascript">
-    konamiManager.add(matchOne, [97, 98, 99])
 
-    function matchOne() {
+    /*↑ ↑ ↓ ↓ ← → ← → b a */
+
+    konamiManager.add(shootFireball, [Keyboard.LEFT, Keyboard.LEFT, Keyboard.A]);
+
+    function shootFireball() {
         console.log('Match One made');
     }
 
