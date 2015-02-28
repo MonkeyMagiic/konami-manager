@@ -10,47 +10,38 @@
  *
  * Project: https://github.com/MonkeyMagiic/konamiManager
  */
-;
-(function (global) {
+var konamiManager = (function (ns) {
     'use strict';
 
     /**
-     * Konami Manager
-     *
-     * @param stage
-     * @constructor
+     * Collection of managed <code>Konami</code> objects.
+     * @type {Array} <Konami>
+     * @private
      */
-    function KonamiManager() {
+    var _konamis = [];
 
-        /**
-         * Collection of konami items
-         * @type {Array}
-         * @private
-         */
-        var _konamis = [];
+    /**
+     * Attach a new Konami to the managed collection by specifying the combination to test against and
+     * the method/function to execute when the test succeeds.
+     *
+     * @param result callback when the <code>combination</code> has been executed successfully.
+     * @param combination sequence of characters (usually keyboard codes).
+     */
+    ns.add = function (result, combination) {
+        _konamis.push(new Konami(result, combination));
+    }
 
-        /**
-         * Add a konami by specifying both the combination/sequence and the result handler.
-         *
-         * @param result callback when the <code>combination</code> has been executed successfully.
-         * @param combination sequence of characters (usually keyboard codes).
-         */
-        KonamiManager.prototype.add = function (result, combination) {
-            _konamis.push(new Konami(result, combination));
-        };
-
-        /**
-         * @private
-         */
-        window.addEventListener('keydown', function (event) {
-
-            var i = 0;
-            do {
-                _konamis[i].testSequence(event.keyCode);
-                i++;
-            } while (i < _konamis.length);
-        });
-    } // End of KonamiManager.
+    /**
+     * @private
+     */
+    window.addEventListener('keydown', function (event) {
+        var i = 0;
+        do {
+            _konamis[i].testSequence(event.keyCode);
+            i++;
+        } while (i < _konamis.length);
+    });
+    return ns;
 
     /**
      * Konami
@@ -64,8 +55,21 @@
         /**
          * Current position in the <code>combination</code>.
          * @type {number}
+         * @private
          */
-        var position = 0;
+        this._position = 0;
+        /**
+         * Result handler when the combination has successfully executed.
+         * @type {function}
+         * @private
+         */
+        this._result = result;
+        /**
+         * The combination or sequence to test against
+         * @type {array}
+         * @private
+         */
+        this._combination = combination;
 
         /**
          * Test a given code against the current <code>position</code>
@@ -73,24 +77,16 @@
          * @param code
          */
         Konami.prototype.testSequence = function (code) {
-            if (combination[position++] === code) {
-                if (position === combination.length) {
-                    result && result();
-                    position = 0;
+
+            if (this._combination[this._position++] === code) {
+                if (this._position === this._combination.length) {
+                    this._result();
+                    this._position = 0;
                 }
             } else {
-                position = 0;
+                this._position = 0;
             }
         };
     } // End of Konami.
 
-    /**
-     * Attach library to window.
-     */
-    if (typeof define === "function" && define.amd) {
-        define(new KonamiManager());
-    } else {
-        window.konamiManager = new KonamiManager();
-    }
-
-})(this);
+})(window.konamiManager || {});

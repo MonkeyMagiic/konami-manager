@@ -11,12 +11,28 @@
 
 <script type="text/javascript">
 
-    /*↑ ↑ ↓ ↓ ← → ← → b a */
+    /**
+     * Attach Konami { ← ← a }
+     */
+    konamiManager.add(attackFireball, [Keyboard.LEFT, Keyboard.LEFT, Keyboard.A]);
 
-    konamiManager.add(shootFireball, [Keyboard.LEFT, Keyboard.LEFT, Keyboard.A]);
+    /**
+     * Attach Konami { → → a }
+     */
+    konamiManager.add(attackIceball, [Keyboard.RIGHT, Keyboard.RIGHT, Keyboard.A]);
 
-    function shootFireball() {
-        console.log('Match One made');
+    /**
+     * Attack Fireball callback handler
+     */
+    function attackFireball() {
+        console.log('Fireball attack');
+    }
+
+    /**
+     * Attack Iceball callback handler
+     */
+    function attackIceball() {
+        console.log('Iceball attack');
     }
 
 </script>
