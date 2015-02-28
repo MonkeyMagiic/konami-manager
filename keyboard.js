@@ -674,7 +674,289 @@
          * Constant associated with the key code value for the ] key (221).
          * @type uint
          */
-        RIGHTBRACKET: 221
+        RIGHTBRACKET: 221,
+
+        /**
+         * Constant associated with the key code value for the S key (83).
+         * @type uint
+         */
+        S: 83,
+
+        /**
+         * Constant associated with the key code value for the button for the search button.
+         * @type uint
+         */
+        SEARCH: 0x0100001F,
+
+        /**
+         * Constant associated with the key code value for the ; key (186).
+         * @type uint
+         */
+        SEMICOLON: 186,
+
+        /**
+         * Constant associated with the key code value for the button for engaging the setup application or menu.
+         * @type uint
+         */
+        SETUP: 0x0100001C,
+
+        /**
+         * Constant associated with the key code value for the Shift key (16).
+         * @type uint
+         */
+        SHIFT: 16,
+
+        /**
+         * Constant associated with the key code value for the button for engaging quick skip backward (usually 7-10 seconds).
+         * @type uint
+         */
+        SKIP_BACKWARD: 0x0100000D,
+
+        /**
+         * Constant associated with the key code value for the button for engaging quick skip ahead (usually 30 seconds).
+         * @type uint
+         */
+        SKIP_FORWARD: 0x0100000C,
+
+        /**
+         * Constant associated with the key code value for the / key (191).
+         * @type uint
+         */
+        SLASH: 191,
+
+        /**
+         * Constant associated with the key code value for the Spacebar (32).
+         * @type uint
+         */
+        SPACE: 32,
+
+        /**
+         * Constant associated with the key code value for the button for stopping transport mode.
+         * @type uint
+         */
+        STOP: 0x01000009,
+
+        /**
+         * The OS X Unicode Begin constant
+         * @type string
+         */
+        STRING_BEGIN: "",
+
+        /**
+         * The OS X Unicode Break constant
+         * @type string
+         */
+        STRING_BREAK: "",
+
+        /**
+         * The OS X Unicode Clear Display constant
+         * @type string
+         */
+        STRING_CLEARDISPLAY: "",
+
+        /**
+         * The OS X Unicode Clear Line constant
+         * @type string
+         */
+        STRING_CLEARLINE: "",
+
+        /**
+         * The OS X Unicode Delete constant
+         * @type string
+         */
+        STRING_DELETE: "",
+
+        /**
+         * The OS X Unicode Delete Character constant
+         * @type string
+         */
+        STRING_DELETECHAR: "",
+
+        /**
+         * The OS X Unicode Delete Line constant
+         * @type string
+         */
+        STRING_DELETELINE: "",
+
+        /**
+         * The OS X Unicode down arrow constant
+         * @type string
+         */
+        STRING_DOWNARROW: "",
+
+        /**
+         * The OS X Unicode End constant
+         * @type string
+         */
+        STRING_END: "",
+
+        /**
+         * The OS X Unicode Execute constant
+         * @type string
+         */
+        STRING_EXECUTE: "",
+
+        /**
+         * The OS X Unicode F1 constant
+         * @type string
+         */
+        STRING_F1: "",
+
+        /**
+         * The OS X Unicode F10 constant
+         * @type string
+         */
+        STRING_F10: "",
+
+        /**
+         * The OS X Unicode F11 constant
+         * @type string
+         */
+        STRING_F11: "",
+
+        /**
+         * The OS X Unicode F12 constant
+         * @type string
+         */
+        STRING_F12: "",
+
+        /**
+         * The OS X Unicode F13 constant
+         * @type string
+         */
+        STRING_F13: "",
+
+        /**
+         * The OS X Unicode F14 constant
+         * @type string
+         */
+        STRING_F14: "",
+
+        /**
+         * The OS X Unicode F15 constant
+         * @type string
+         */
+        STRING_F15: "",
+
+        /**
+         * The OS X Unicode F16 constant
+         * @type string
+         */
+        STRING_F16: "",
+
+        /**
+         * The OS X Unicode F17 constant
+         * @type string
+         */
+        STRING_F17: "",
+
+        /**
+         * The OS X Unicode F18 constant
+         * @type string
+         */
+        STRING_F18: "",
+
+        /**
+         * The OS X Unicode F19 constant
+         * @type string
+         */
+        STRING_F19: String = "",
+
+        /**
+         * The OS X Unicode F2 constant
+         * @type string
+         */
+        STRING_F2: "",
+
+        /**
+         * The OS X Unicode F20 constant
+         * @type string
+         */
+        STRING_F20: "",
+
+        /**
+         * The OS X Unicode F21 constant
+         * @type string
+         */
+        STRING_F21: "",
+
+        /**
+         * The OS X Unicode F22 constant
+         * @type string
+         */
+        STRING_F22: "",
+
+        /**
+         * The OS X Unicode F23 constant
+         * @type string
+         */
+        STRING_F23: "",
+
+        /**
+         * The OS X Unicode F24 constant
+         * @type string
+         */
+        STRING_F24: "",
+
+        /**
+         * The OS X Unicode F25 constant
+         * @type string
+         */
+        STRING_F25: "",
+
+        /**
+         * The OS X Unicode F26 constant
+         * @type string
+         */
+        STRING_F26: "",
+
+        /**
+         * The OS X Unicode F27 constant
+         * @type string
+         */
+        STRING_F27: "",
+
+        /**
+         * The OS X Unicode F28 constant
+         * @type string
+         */
+        STRING_F28: "",
+
+        /**
+         * The OS X Unicode F29 constant
+         * @type string
+         */
+        STRING_F29: "",
+
+        /**
+         * The OS X Unicode F3 constant
+         * @type string
+         */
+        STRING_F3: "",
+
+        /**
+         * The OS X Unicode F30 constant
+         * @type string
+         */
+        STRING_F30: "",
+
+        /**
+         * The OS X Unicode F31 constant
+         * @type string
+         */
+        STRING_F31: "",
+
+        /**
+         * The OS X Unicode F32 constant
+         * @type string
+         */
+        STRING_F32: "",
+
+        /**
+         * The OS X Unicode F33 constant
+         * @type string
+         */
+        STRING_F33: ""
     };
 
     /**
